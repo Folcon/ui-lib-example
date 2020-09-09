@@ -1,0 +1,5 @@
+^{:open-url   false
+  :watch-dirs ["test" "src" "checkouts/ui-lib"]
+  :css-dirs ["resources/public/css"]
+  :auto-testing true}
+{:main main-app.core}
