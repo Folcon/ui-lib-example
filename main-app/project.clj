@@ -8,7 +8,7 @@
 
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.773"]
-                 [reagent "0.10.0"]
+                 [reagent "1.0.0-alpha2" :exclusions [cljsjs/react cljsjs/react-dom]]
                  [re-frame "1.0.0-rc2"]
                  [re-com "2.8.0"]
                  [clj-commons/secretary "1.2.5-SNAPSHOT"]
@@ -16,9 +16,11 @@
 
   :source-paths ["src"]
 
-  :clean-targets ^{:protect false} ["target" "resources/public/cljs-out"]
+  :clean-targets ^{:protect false} ["target" "resources/public/js/compiled"]
 
-  :aliases {"fig"       ["trampoline" "run" "-m" "figwheel.main"]
+  :aliases {"dev"       ["do" "clean," "fig:npm," "fig:dev"]
+            "fig"       ["trampoline" "run" "-m" "figwheel.main"]
+            "fig:npm"   ["run" "-m" "figwheel.main" "--" "--install-deps"]
             "fig:dev"   ["trampoline" "run" "-m" "figwheel.main" "-b" "dev" "-r"]
             "fig:min"   ["run" "-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]
             "fig:test"  ["run" "-m" "figwheel.main" "-co" "test.cljs.edn" "-m" "main-app.test-runner"]}

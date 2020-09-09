@@ -1,2 +1,98 @@
-/* some style */
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+}
 
+.carousel-indicators li {
+    background-color: lightgray;
+}
+
+.carousel-indicators .active {
+    background-color: #007bff;
+}
+
+
+.carousel .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .frame {
+    width: 600px;
+    height: 600px;
+}
+
+.carousel .row {
+    align-items: center;
+    height: 100%;
+}
+
+.carousel .transition-group {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.carousel .slide {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .slide-base {
+    transition: transform 500ms cubic-bezier(.645, .045, .355, 1);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.carousel .slide-enter-left {
+    transform: translate(100%, 0);
+}
+
+.carousel .slide-enter-right {
+    transform: translate(-100%, 0);
+}
+
+.carousel .slide-enter-up {
+    transform: translate(0, 100%);
+}
+
+.carousel .slide-enter-down {
+    transform: translate(0, -100%);
+}
+
+.carousel .slide-enter-active {
+    transform: translate(0, 0);
+}
+
+.carousel .slide-exit {
+    transform: translate(0, 0);
+}
+
+.carousel .slide-exit-active-left {
+    transform: translate(-100%, 0);
+}
+
+.carousel .slide-exit-active-right {
+    transform: translate(100%, 0);
+}
+
+.carousel .slide-exit-active-up {
+    transform: translate(0, -100%);
+}
+
+.carousel .slide-exit-active-down {
+    transform: translate(0, 100%);
+}
+
+.carousel .slide-exit-done {
+    display: none;
+}

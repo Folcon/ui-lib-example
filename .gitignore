@@ -1,4 +1,5 @@
-cljs-out/
+node_modules/
+compiled/
 .idea/
 *.iml
 
