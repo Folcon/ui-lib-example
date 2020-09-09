@@ -3,7 +3,8 @@
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
    [reagent.dom :as rdom]
-   [main-app.runtime :refer [app-panel]]))
+   [main-app.runtime :refer [app-panel]]
+   [main-app.routes :refer [app-routes]]))
 
 
 (defn get-app-element []
@@ -14,6 +15,7 @@
 
 (defn mount-app-element []
   (when-let [el (get-app-element)]
+    (app-routes)
     (mount el)))
 
 ;; conditionally start your application based on the presence of an "app" element

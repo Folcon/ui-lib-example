@@ -9,6 +9,9 @@
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.773"]
                  [reagent "0.10.0"]
+                 [re-frame "1.0.0-rc2"]
+                 [re-com "2.8.0"]
+                 [clj-commons/secretary "1.2.5-SNAPSHOT"]
                  [ui-lib "0.1.0-SNAPSHOT"]]
 
   :source-paths ["src"]

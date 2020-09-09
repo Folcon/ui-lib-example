@@ -3,14 +3,14 @@
    [goog.dom :as gdom]
    [reagent.core :as reagent :refer [atom]]
    [reagent.dom :as rdom]
-   [ui-lib.layout.index :refer [app-panel]]))
+   [ui-lib.layout.index :refer [home-page]]))
 
 
 (defn get-app-element []
   (gdom/getElement "app"))
 
 (defn mount [el]
-  (rdom/render [app-panel] el))
+  (rdom/render [home-page] el))
 
 (defn mount-app-element []
   (when-let [el (get-app-element)]

@@ -8,7 +8,9 @@
 
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.773"]
-                 [reagent "0.10.0"]]
+                 [reagent "0.10.0"]
+                 [re-frame "1.0.0-rc2"]
+                 [re-com "2.8.0"]]
 
   :source-paths ["src"]
 
